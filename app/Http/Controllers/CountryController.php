@@ -127,13 +127,13 @@ class CountryController extends Controller
                         
             'title' => 'required',
             'country_id' => 'required',
-            'description' => 'required',
+            'editor1' => 'required',
             'intake' => 'required',
    
        ]);
         $countryDes = new CountryDes();
         $countryDes->title = $request->input('title');
-        $countryDes->description = $request->input('description');
+        $countryDes->description = $request->input('editor1');
         $countryDes->country_id = $request->country_id;
         $countryDes->intake = $request->intake;
         $countryDes->save();
@@ -231,6 +231,13 @@ class CountryController extends Controller
   
             
             })
+            ->addColumn('description', function ($row) {
+                $description = $row->description;
+                  return "$description";
+
+          
+          })
+
 
             ->addColumn('action', function ($row) {
                 return '<a type="button" href="' . route("country.edit", ['id' => encrypt($row->id)]) . '" class="btn btn-sm btn-primary "> <i class="fa fa-pencil-alt"></i> </a>
@@ -238,7 +245,7 @@ class CountryController extends Controller
 				<a  href="' . route("country.DesdescriptDel", ['id' => encrypt($row->id)]) . '" class="btn btn-sm btn-danger  del" data-original-title="Delete"> <i class="fa fa-times"></i> </a>';
             })
 
-            ->rawColumns(['id','country','intake','action'])
+            ->rawColumns(['id','country','intake','description','action'])
             ->make(true);
     }
 

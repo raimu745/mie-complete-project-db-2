@@ -1,9 +1,11 @@
+
 @extends('layoutAdmin.master')
 @section('title')
 Admin|Slider
 @endsection
 
 @section('main-content')
+<script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
@@ -75,7 +77,7 @@ Admin|Slider
 
                 <div class="form-group mb-5">
                 <label>Description</label>
-                <textarea class="form-control" rows="10" placeholder="Add a description here" name="description"></textarea>
+                <textarea  name="editor1"></textarea>
                 @error('description')
                             <div class="alert alert-danger">{{$message}}</div>
                 @enderror
@@ -117,7 +119,7 @@ Admin|Slider
 
 
 });
-
+CKEDITOR.replace( 'editor1' );
 </script>
 
 @endsection
