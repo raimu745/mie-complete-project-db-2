@@ -59,8 +59,19 @@ Admin|Slider
                                 </select>
                             </div>
                         </div>
-                </div>
+                
+                
+                    <div class="col-md-6">
 
+                        <div class="form-group">
+                            <label style="text-align:left !important;">Intake<span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" name="intake" placeholder="Enter a name..">
+                            @error('intake')
+                            <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
+                        </div>
+
+                    </div>
 
                 <div class="form-group mb-5">
                 <label>Description</label>

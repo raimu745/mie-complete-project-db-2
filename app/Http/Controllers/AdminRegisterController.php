@@ -115,6 +115,8 @@ class AdminRegisterController extends Controller
                                   
        ]);
        $check=User::where('email',$request->email)->first();
+
+       if($check){
        if($check->verify == '1'){
 
        if (Auth::attempt(['email'=>$request->email,'password'=>$request->password])) {
@@ -145,6 +147,14 @@ class AdminRegisterController extends Controller
     return redirect()->back()
         ->with($notification);
        }
+    }else{
+        $notification = array(
+            'message' => 'The provided credentials do not match our records.',
+            'alert-type' => 'error'
+        );
+        return redirect()->back()
+            ->with($notification);
+    }
     
     }
     function forget(){

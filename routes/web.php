@@ -61,7 +61,10 @@ Route::prefix('admin')->group(function () {
     ///////////////////////////country description //////////////////////
     Route::get('/countrydes',[CountryController::class,'desfront'])->name('country.des');
     Route::get('/countrydesview',[CountryController::class,'viewDesdescript'])->name('country.des.view');
+    Route::get('/countryDesdescriptDel/{id}',[CountryController::class,'countryDesdescriptDel'])->name('country.DesdescriptDel');
+     
     Route::get('/countryDesdescript',[CountryController::class,'countryDesdescript'])->name('country.datadescription');
+
 
     Route::post('/countrydes_add',[CountryController::class,'countrydesAdd'])->name('country.countrydes_add');
     Route::post('/countryeye',[CountryController::class,'countryeye'])->name('countryeye');
