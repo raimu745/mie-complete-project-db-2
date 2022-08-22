@@ -86,6 +86,13 @@ class CountryController extends Controller
         $country = Country::find($id);
 
         return view('admin.editcountry', compact('country'));
+        
+        $notification = array(
+            'message' => 'Country Updated Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('country.show')
+            ->with($notification);
     }
     function update(Request $request, $id)
     {
@@ -240,7 +247,7 @@ class CountryController extends Controller
 
 
             ->addColumn('action', function ($row) {
-                return '<a type="button" href="' . route("country.edit", ['id' => encrypt($row->id)]) . '" class="btn btn-sm btn-primary "> <i class="fa fa-pencil-alt"></i> </a>
+                return '<a type="button" href="' . route("country.editdes", ['id' => encrypt($row->id)]) . '" class="btn btn-sm btn-primary "> <i class="fa fa-pencil-alt"></i> </a>
 
 				<a  href="' . route("country.DesdescriptDel", ['id' => encrypt($row->id)]) . '" class="btn btn-sm btn-danger  del" data-original-title="Delete"> <i class="fa fa-times"></i> </a>';
             })
@@ -262,4 +269,36 @@ class CountryController extends Controller
         return redirect()->back()
             ->with($notification);
     }
+
+    function editCountryDes(Request $request){
+        $id = decrypt($request->id);
+        $countries = Country::orderBy('id', 'DESC')->get();
+        $edit = CountryDes::find($id);
+        return view('admin.editcountrydes',compact('countries','edit'));
+    }
+     function updateCountryDes(Request $request){
+        // return 'update';
+        $request->validate([
+                        
+            'title' => 'required',
+            'country_id' => 'required',
+            'editor1' => 'required',
+            'intake' => 'required',
+   
+       ]);
+        $countryDes = new CountryDes();
+        $countryDes->exists = true;
+        $countryDes->id =  decrypt($request->id);
+        $countryDes->title = $request->input('title');
+        $countryDes->description = $request->input('editor1');
+        $countryDes->country_id = $request->country_id;
+        $countryDes->intake = $request->intake;
+        $countryDes->save();
+        $notification = array(
+            'message' => 'Country Description Update Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('country.des.view')->with($notification);
+     }
 }

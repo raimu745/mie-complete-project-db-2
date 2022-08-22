@@ -22,13 +22,13 @@ Admin|SliderTable
         <div class="block-content">
             <div class="block block-rounded">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">View Country</h3>
+                    <h3 class="block-title"><a href="{{route('country.index')}}" class="btn btn-primary">Add Country</a></h3>
                 </div>
                 <div class="block-content block-content-full">
                           <div class="row"><div class="col-sm-12"><table class="datatable table table-bordered table-striped table-vcenter js-dataTable-full dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                             <thead>
                             <tr role="row">
-                                <th class="text-center sorting_asc" style="width: 80px;" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">#</th>
+                                <th class="text-center sorting_asc" style="width: 80px;" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">#id</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th>
                                 <th class="d-none d-sm-table-cell sorting" style="width: 30%;" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending">Image</th>
                                 <th style="width: 15%;" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Registered: activate to sort column ascending">Actions</th>

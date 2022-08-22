@@ -18,4 +18,7 @@ class Country extends Model
     function image(){
         return $this->hasOne(CountryImage::class);
     }
+    function country_visitors(){
+        return $this->hasMany(CountryVisitor::class);
+    }
 }

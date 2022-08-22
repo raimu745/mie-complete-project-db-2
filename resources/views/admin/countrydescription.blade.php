@@ -23,7 +23,7 @@ Admin|Description
         <div class="block-content">
             <div class="block block-rounded">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">View Description Country</h3>
+                    <h3 class="block-title"><a href="{{route('country.des')}}" class="btn btn-primary">Add Description</a></h3>
                 </div>
                 <div class="block-content block-content-full">
                           <div class="row"><div class="col-sm-12"><table class="datatable table table-bordered table-striped table-vcenter js-dataTable-full dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">

@@ -2,11 +2,11 @@
 <div class="bg-body-light">
 	<div class="content content-full">
 		<div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-			<h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Slider Management</h1>
+			<h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Slider </h1>
 			<nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">Dashboard</li>
-					<li class="breadcrumb-item active" aria-current="page">Slider Management</li>
+					<li class="breadcrumb-item active" aria-current="page">Slider</li>
 				</ol>
 			</nav>
 		</div>
@@ -15,7 +15,7 @@
 <div class="block-content">
 	<div class="block block-rounded">
 		<div class="block-header block-header-default">
-			<h3 class="block-title">View Slider</h3> </div>
+			<h3 class="block-title"><a href="{{route('slider.index')}}" class="btn btn-primary">Add Slider</h3></a></div>
 		<div class="block-content block-content-full">
 			<!-- DataTables init on table by adding .js-dataTable-full class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
 			<table class="table data-table datatable"  id="table">

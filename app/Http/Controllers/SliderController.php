@@ -204,10 +204,7 @@ class SliderController extends Controller
 
             return DataTables::of($data)
             ->addIndexColumn()
-            ->addColumn('id', function($row){
-                $i =1;
-                  return $i++;
-            })
+            
             ->addColumn('image', function($row){
                 return '<a class="image-popup-vertical-fit no gaps, zoom animation" href="'.asset("assets/uploads/slider/".$row->image).'" title="'.$row->name.'">
                 <img src="'.asset("assets/uploads/slider/".$row->image).'" width="75" height="75">';
@@ -217,7 +214,7 @@ class SliderController extends Controller
 
 											<a  href='.route("slider.destroy",["id"=> encrypt($row->id)]).' class="btn btn-sm btn-danger  del" data-original-title="Delete"> <i class="fa fa-times"></i> </a>';
             })
-            ->rawColumns(['id','image','action'])
+            ->rawColumns(['image','action'])
             ->make(true);
 
         //return view('viewslider');

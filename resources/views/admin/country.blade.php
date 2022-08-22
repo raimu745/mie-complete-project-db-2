@@ -190,7 +190,7 @@ outline: none;
     <div class="content">
         <div class="block block-rounded">
             <div class="block-header block-header-default">
-                <h3 class="block-title">Add Country</h3>
+                <h3 class="block-title"><a href="{{route('country.show')}}" class="btn btn-primary">View Country</a></h3>
                 <div class="block-options">
                     <button type="submit" class="btn btn-sm btn-primary">
                         <i class="fa fa-fw fa-check"></i> Submit
