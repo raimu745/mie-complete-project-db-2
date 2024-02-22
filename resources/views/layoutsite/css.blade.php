@@ -3,8 +3,7 @@
   <title>Traversal Travel Category Bootstrap Responsive Template | Home :: W3layouts</title>
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
+  <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
   <!-- google fonts -->
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{asset('site/assets/css/style-starter.css')}}">

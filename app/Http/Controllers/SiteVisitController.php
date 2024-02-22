@@ -37,4 +37,11 @@ class SiteVisitController extends Controller
      return redirect()->back()->with($notification);
     }
 
+    function alldel_row(){
+        // dd(12234313);
+        $siteVistor = SiteVisitor::truncate();
+
+        return redirect()->back();
+    }
+
 }

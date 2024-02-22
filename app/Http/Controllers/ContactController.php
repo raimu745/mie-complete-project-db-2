@@ -30,7 +30,8 @@ class ContactController extends Controller
                 return '<span class="nav-main-link-badge badge badge-pill badge-success">Answerd</span>';
             }
             
-     })
+   
+        })
 
         ->addColumn('action', function($row) {
 

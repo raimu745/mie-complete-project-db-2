@@ -15,6 +15,11 @@ Home
     display: grid;
     align-items: center;
     }
+    .owl-two.owl-carousel.owl-theme .owl-dots .owl-dot span {
+    
+    margin: 30px 2px;
+    
+}
 </style>
  <!-- main-slider -->
  <section class="w3l-main-slider" id="home">

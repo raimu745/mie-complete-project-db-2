@@ -1,5 +1,5 @@
 @extends('layoutAdmin.master')
- @section('title') Admin|SliderTable @endsection 
+ @section('title') Contact Us @endsection 
  @section('main-content')
  <style>
 table {

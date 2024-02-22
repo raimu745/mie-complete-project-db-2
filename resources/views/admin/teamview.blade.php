@@ -1,5 +1,5 @@
 @extends('layoutAdmin.master')
- @section('title') Admin|SliderTable @endsection 
+ @section('title') Admin|TeamTable @endsection 
  @section('main-content')
 <div class="bg-body-light">
 	<div class="content content-full">

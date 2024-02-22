@@ -186,7 +186,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Ejarnutowski\LaravelApiKey\Providers\ApiKeyServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -196,6 +196,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
+        
 
     ],
 

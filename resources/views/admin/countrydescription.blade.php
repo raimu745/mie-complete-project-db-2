@@ -1,6 +1,6 @@
 @extends('layoutAdmin.master')
 @section('title')
-Admin|Description
+Admin|CountryDescriptionTable
 @endsection
 
 @section('main-content')
@@ -11,9 +11,7 @@ Admin|Description
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">Dashboard</li>
-
-                    <li class="breadcrumb-item active" aria-current="page">Country</li>
-                    <li class="breadcrumb-item active" aria-current="page">Description</li>
+                    <li class="breadcrumb-item active" aria-current="page">Country Description</li>
                 </ol>
             </nav>
         </div>

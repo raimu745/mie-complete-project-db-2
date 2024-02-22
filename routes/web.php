@@ -119,6 +119,7 @@ Route::prefix('admin')->group(function () {
     Route::get('countryvisitor',[CountryVisitorController::class,'index'])->name('country.visitor');
     Route::get('countryvisitor_show',[CountryVisitorController::class,'countryvisitorDatatable'])->name('country.visitordatatable');
     Route::get('countryvisitor_delete',[CountryVisitorController::class,'countryVisitDel'])->name('country_visitor.delete');
+    Route::get('countryvisitor_row_del',[SiteVisitController::class,'alldel_row'])->name('country_visitor.alldelete');
 
 
 });

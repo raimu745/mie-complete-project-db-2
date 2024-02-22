@@ -58,11 +58,16 @@
       </div>
     </div>
   </div>
+  <?php $number = App\Models\Setting::find('1'); ?>
 
   <!-- move top -->
-  <button onclick="topFunction()" id="movetop" title="Go to top">
-    <span class="fa fa-angle-up"></span>
+  <a href="https://api.whatsapp.com/send?phone=+92{{$number->phone_nbr}}&text=Hello%2C%20Team!" target="_blank" >
+  <button  id="movetop" title="Whatsapp" style="background:#41B752;">
+  <span class="fa fa-whatsapp"></span>
   </button>
+  </a>
+
+  
   <script>
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function () {

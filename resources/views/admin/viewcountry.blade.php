@@ -1,6 +1,6 @@
 @extends('layoutAdmin.master')
 @section('title')
-Admin|SliderTable
+Admin|CountryTable
 @endsection
 
 @section('main-content')

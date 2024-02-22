@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\SliderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+
+Route::middleware('auth.apikey')->group(function (){
+    
+    Route::post('data',[App\Http\Controllers\Api\SliderController::class,'data']);
+    Route::post('country',[App\Http\Controllers\Api\SliderController::class,'country_store']);
+    Route::post('slider_delete',[App\Http\Controllers\Api\SliderController::class,'delete']);
+    //////////////////////////// Teamm ///////////////////
+    Route::post('team_add',[App\Http\Controllers\Api\TeamController::class,'add']);
+    Route::post('team_delete',[App\Http\Controllers\Api\TeamController::class,'delete']);
+
+    Route::post('update',[App\Http\Controllers\Api\TeamController::class,'update']);
 });

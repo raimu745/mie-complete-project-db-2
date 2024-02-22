@@ -14,8 +14,9 @@ class SettingController extends Controller
     }
     function store(Request $request){
      
+       $phone = $request->input('phone_nbr'); 
+      $cell =  substr($phone, 1);
       
-
         $image ="";
         if($request->hasfile('image'))
         {
@@ -35,7 +36,7 @@ class SettingController extends Controller
         $setting->logo = $image;
         $setting->email = $request->input('email');
         $setting->address = $request->input('address');
-        $setting->phone_nbr = $request->input('phone_nbr'); 
+        $setting->phone_nbr = $cell; 
         $setting->facebook_link = $request->input('facebook_link');
         $setting->save();
         $notification = array(

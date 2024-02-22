@@ -21,7 +21,7 @@ use Stevebauman\Location\Facades\Location;
 
 class HomeController extends Controller
 {
-    function index(){
+    function index(Request $request){
         $slider = Slider::where('status',1)->latest()->limit(4)->get();
         if(isset($slider[0])){
          $s1 = $slider[0]->image;
@@ -55,6 +55,7 @@ class HomeController extends Controller
 
         $ip = '103.7.78.173';
         $data = Location::get($ip);
+       
         SiteVisitor::create([
             'ip_address' => $ip,
             'country_name' =>  $data->countryName ,

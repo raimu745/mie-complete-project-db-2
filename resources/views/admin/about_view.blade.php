@@ -1,4 +1,7 @@
-@extends('layoutAdmin.master') @section('title') Admin|SliderTable @endsection @section('main-content')
+@extends('layoutAdmin.master') 
+@section('title') Admin|About
+ @endsection 
+ @section('main-content')
 <div class="bg-body-light">
 	<div class="content content-full">
 		<div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">

@@ -36,7 +36,7 @@
           </ul>
         </div>
         <div class="d-lg-block d-none">
-          <a href="contact.html" class="btn btn-style btn-secondary">Get In Touch</a>
+          <a href="{{route('contact_site.index')}}" class="btn btn-style btn-secondary">Get In Touch</a>
         </div>
         <!-- toggle switch for light and dark theme -->
         <div class="mobile-position">

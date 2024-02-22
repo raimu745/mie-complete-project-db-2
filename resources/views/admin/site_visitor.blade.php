@@ -1,5 +1,5 @@
 @extends('layoutAdmin.master')
- @section('title') Admin|SliderTable @endsection 
+ @section('title') Admin|Site Visitor @endsection 
  @section('main-content')
 
 <div class="bg-body-light">
@@ -18,7 +18,7 @@
 <div class="block-content">
 	<div class="block block-rounded">
 		<div class="block-header block-header-default">
-			<h3 class="block-title">Site Visitor</h3> </div>
+			<h3 class="block-title"><a href="" class="btn btn-primary">	Site Visitor </a></h3> <span><a href="{{route('country_visitor.alldelete')}}"  class="btn btn-danger">Delete All</a></span> </div>
 		<div class="block-content block-content-full">
 			<!-- DataTables init on table by adding .js-dataTable-full class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
 			<div style="overflow-x:auto;">

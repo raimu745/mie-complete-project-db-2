@@ -1,6 +1,6 @@
 @extends('layoutAdmin.master')
 @section('title')
-Admin|Slider
+Admin|Setting
 @endsection
 
 @section('main-content')

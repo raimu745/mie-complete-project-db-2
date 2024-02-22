@@ -1,6 +1,6 @@
 @extends('layoutAdmin.master')
 @section('title')
-Admin|index
+Admin|Dashboard
 @endsection
 @section('main-content')
 <div class="content">
@@ -84,7 +84,7 @@ Admin|index
                                    
                                 </div>
                                 <div class="block-content block-content-full block-content-sm bg-body-light font-size-sm">
-                                    <a class="font-w500" href="javascript:void(0)">
+                                    <a class="font-w500" href="{{route('country.visitor')}}">
                                        View all visitors
                                         <i class="fa fa-arrow-right ml-1 opacity-25"></i>
                                     </a>

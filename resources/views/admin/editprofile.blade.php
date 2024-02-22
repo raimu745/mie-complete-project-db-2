@@ -14,7 +14,7 @@ Admin|index
                                 <h2 class="h4 font-w700 text-white-75">
                                     {{auth()->user()->name}}
                                 </h2>
-                                <a class="btn btn-hero-dark" href="be_pages_generic_profile.html">
+                                <a class="btn btn-hero-dark" href="{{route('dashboard')}}">
                                     <i class="fa fa-fw fa-arrow-left"></i> Back to Profile
                                 </a>
                             </div>
